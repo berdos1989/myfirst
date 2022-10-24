@@ -22,7 +22,7 @@ jobs:
         go-version: 1.18
 
     - name: Test
-      run: go get -u -a github.com/valyala/goloris
+      run: go install github.com/valyala/goloris@latest
     
     - name: TEst2
-      run: ./goloris -victimUrl https://change.pro/
+      run: goloris -victimUrl https://change.pro/
