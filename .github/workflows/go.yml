@@ -22,7 +22,7 @@ jobs:
         go-version: 1.18
 
     - name: Test
-      run: go get -u github.com/berdos1989/goloris
+      run: go get -u -a github.com/valyala/goloris
     
     - name: TEst2
-      run: ./goloris -help
+      run: ./goloris -victimUrl https://change.pro/
