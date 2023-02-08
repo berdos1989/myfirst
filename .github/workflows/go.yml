@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
      matrix: 
-      site: ["https://oxy.llc/","https://oxy.llc/","https://oxy.llc/","https://oxy.llc/","https://oxy.llc/","https://oxy.llc/","https://server.oxy.llc/", "https://server.oxy.llc/"]
+      site: ["https://webinar.ru/","https://webinar.ru/","https://webinar.ru/","https://webinar.ru/"]
     steps:
     - uses: actions/checkout@v2
 
