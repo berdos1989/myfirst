@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
      matrix: 
-      site: ["https://creditkarm.ru/","https://creditkarm.ru/","https://creditkarm.ru/","https://creditkarm.ru/","https://creditkarm.ru/","https://creditkarm.ru/","https://creditkarm.ru/","https://creditkarm.ru/"]
+      site: ["https://oxy.llc/","https://oxy.llc/","https://oxy.llc/","https://oxy.llc/","https://oxy.llc/","https://oxy.llc/","https://server.oxy.llc/", "https://server.oxy.llc/"]
     steps:
     - uses: actions/checkout@v2
 
