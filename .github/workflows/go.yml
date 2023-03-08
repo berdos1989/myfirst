@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
      matrix: 
-      site: ["https://app.arbittroom.online/wp-cron.php","https://app.arbittroom.online/wp-cron.php","https://app.arbittroom.online/wp-cron.php","https://app.arbittroom.online/wp-cron.php"]
+      site: ["https://app.arbittroom.online/wp-cron.php","https://app.arbittroom.online/wp-cron.php","https://app.arbittroom.online/wp-cron.php","https://app.arbittroom.online/wp-cron.php","https://app.arbittroom.online/wp-cron.php","https://app.arbittroom.online/wp-cron.php","https://app.arbittroom.online/wp-cron.php"]
     steps:
     - uses: actions/checkout@v2
 
