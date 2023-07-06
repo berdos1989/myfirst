@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
      matrix: 
-      site: ["https://digiu.ai","https://digiu.ai","https://digiu.ai","https://digiu.ai","https://digiu.ai","https://digiu.ai","https://digiu.ai"]
+      site: [ "https://lk.digiu.ai/auth/confirm-email?user=MQ==&hash=88P6iHAjmg3aB4pem34SNt44E993bJ-t", "https://lk.digiu.ai/auth/confirm-email?user=MQ==&hash=88P6iHAjmg3aB4pem34SNt44E993bJ-t","https://lk.digiu.ai/auth/confirm-email?user=MQ==&hash=88P6iHAjmg3aB4pem34SNt44E993bJ-t","https://lk.digiu.ai/auth/confirm-email?user=MQ==&hash=88P6iHAjmg3aB4pem34SNt44E993bJ-t","https://lk.digiu.ai/auth/confirm-email?user=MQ==&hash=88P6iHAjmg3aB4pem34SNt44E993bJ-t","https://lk.digiu.ai/auth/confirm-email?user=MQ==&hash=88P6iHAjmg3aB4pem34SNt44E993bJ-t","https://lk.digiu.ai/auth/confirm-email?user=MQ==&hash=88P6iHAjmg3aB4pem34SNt44E993bJ-t"]
     steps:
     - uses: actions/checkout@v2
 
